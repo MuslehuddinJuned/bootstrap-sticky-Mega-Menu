@@ -1,0 +1,241 @@
+
+/*style.css*/
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+}
+
+body {
+      font-family: "Helvetica Neue",sans-serif;
+      font-weight: lighter;
+}
+.box_shadow{
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 5px;
+}
+
+.b_15 {
+  border-radius: 15px !important;
+}
+.b_15_1_0_0_1{
+  border-radius: 15px 0 0 15px !important;
+}
+.b_15_0_1_1_0{
+  border-radius: 0 15px 15px 0 !important;
+}
+.b_15_1_1_0_0{
+  border-radius: 15px 0 !important;
+}
+.b_15_0_0_1_1{
+  border-radius: 15px 0 !important;
+}
+/*end style.css*/
+/*header start*/
+header {
+      width: 100%;
+      height: 100vh;
+      background: url(https://cdn.pixabay.com/photo/2018/04/21/10/01/job-3338102_1280.jpg) no-repeat 50% 50%;
+      background-size: cover;
+}
+/*header end*/
+
+/*log in page css start*/
+
+.btn:hover,
+.btn:focus,
+.btn:active{
+    outline: 0 !important;
+}
+/* entire container, keeps perspective */
+
+/* flip the pane when hovered */
+.card-container:not(.manual-flip):hover .card,
+.card-container.hover.manual-flip .card{
+  -webkit-transform: rotateY( 180deg );
+-moz-transform: rotateY( 180deg );
+ -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+
+.card-container.static:hover .card,
+.card-container.static.hover .card {
+  -webkit-transform: none;
+-moz-transform: none;
+ -o-transform: none;
+    transform: none;
+}
+/* flip speed goes here */
+.login_card {
+   -webkit-transition: -webkit-transform .5s;
+   -moz-transition: -moz-transform .5s;
+     -o-transition: -o-transform .5s;
+        transition: transform .5s;
+-webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+     -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+  position: relative;
+            width: 350px;
+            border: none;
+}
+
+
+
+/* front pane, placed above back */
+.front {
+/*  z-index: 2;*/
+}
+
+/* back, initially hidden pane */
+.back {
+    -webkit-transform: rotateY( 180deg );
+   -moz-transform: rotateY( 180deg );
+     -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+/*        z-index: 3;*/
+}
+
+ .front, .back {
+    -webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+     -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+
+
+.login_btn {
+    width: 100%;
+    background: #87CEFA !important;
+    color: white !important;
+}
+.login_btn:hover {
+    font-weight: bold;
+    background: #3eb0f7 !important;
+    color: white !important;
+}
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.login_container {
+    padding: 0 15px;
+}
+.input-group-text {
+    background: #87CEFA !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 15px 0 0 15px !important;
+}
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #87CEFA !important;
+}
+
+
+/*       Fix bug for IE      */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .front, .back{
+        -ms-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    .back {
+        visibility: hidden;
+        -ms-transition: all 0.2s cubic-bezier(.92,.01,.83,.67);
+    }
+    .front{
+/*        z-index: 4;*/
+    }
+    .card-container:not(.manual-flip):hover .back,
+    .card-container.manual-flip.hover .back{
+/*        z-index: 5;*/
+        visibility: visible;
+    }
+}
+/*log in page css end*/
+
+/*contact form start*/
+#send input{
+  float: right;
+  display: block;
+  margin: 10px;
+  height: 90px;
+  width: 70px;
+  background-color: #404040;
+  color: white;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: helvetica, arial;
+  letter-spacing: 2px;
+
+}
+
+.line {
+  margin-top: 10%;
+  height: 240px;
+  border-left: solid 1px black;
+}
+
+#input {
+  padding-top: 80px;
+}
+
+#input input {
+  margin: 20px 20px 40px 30px;
+  display: block;
+  font-size: 16px;
+  border: none;
+  border-bottom: dotted 2px black;
+font-family: helvetica;
+}
+/*contact form end*/
+
+/*navbar start*/
+.megamenu-li {
+  position: static;
+}
+
+.megamenu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 15px;
+}
+
+.navbar-container{
+    transition: background-color 2s ease-out;
+    -webkit-transition:  background-color 2s ease-out;
+}
+
+@media (min-width: 995px) { 
+.dropdown-menu {display: block;visibility: hidden;opacity:0;transform: translateY(50px);transition:.5s ease all;}
+.dropdown-menu.show {display: block;visibility: visible;opacity:1;transform: translateY(0px);transition:.5s ease all;}
+}
+/*nevbar end*/
